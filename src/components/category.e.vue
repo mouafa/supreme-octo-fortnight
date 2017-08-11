@@ -1,7 +1,11 @@
+<style scoped lang="scss">
 
+</style>
 
 <template>
-  <button class="button outline large w100" @click="select(title)">{{title}}</button>
+  <section class="category">
+    <button class="button outline large w100" @click="select(title)">{{title}}</button>
+  </section>
 </template>
 
 <script>

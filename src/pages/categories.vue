@@ -8,9 +8,9 @@
   <section>
     <app-header></app-header>
     <!-- <counter></counter> -->
-    <!-- <div class="row gutters auto">
-      <category v-for="c in categoriesList" class="col col-4" :title="c.name" @select="select"></category>
-    </div> -->
+    <div class="">
+      <!-- <category v-for="c in categoriesList" class="col col-4" :title="c.name" @select="select"></category> -->
+    </div>
 
   </section>
 </template>

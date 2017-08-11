@@ -24,7 +24,7 @@ body {
 </template>
 
 <script>
-require('kube/dist/css/kube.css')
+require('kube/src/kube.scss')
 
 export default {
   name: 'app'
