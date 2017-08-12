@@ -1,15 +1,21 @@
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-
+<style scoped lang="sass">
+.c-grid
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  max-width: 1200px
+  margin: auto
 </style>
 
 <template>
   <section>
     <app-header></app-header>
     <!-- <counter></counter> -->
-    <div class="">
-      <!-- <category v-for="c in categoriesList" class="col col-4" :title="c.name" @select="select"></category> -->
+    <div class="c-grid">
+    <!-- <div class="row gutters auto"> -->
+      <category v-for="c in categoriesList" :key="c.id" :payload="c" @select="select" tabindex="0"></category>
     </div>
 
   </section>
