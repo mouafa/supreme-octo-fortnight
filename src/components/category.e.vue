@@ -26,7 +26,7 @@ $transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
       // background-color: rgba(255, 255, 255, .97)
       background-color: #FFF
       opacity: .97
-      box-shadow: 0 0 0 2px rgba(255,255,255,.3)
+      // box-shadow: 0 0 0 2px rgba(255,255,255,.3)
       top: 0
       right: 0
       bottom: 0
@@ -53,10 +53,12 @@ $transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
     color: #000
     font-weight: 600
   .icons
-    color: red
-    font-size: 77px
-    /* z-index: 15; */
     position: absolute
+    color: #fff
+    font-size: 77px
+    z-index: 1
+    opacity: .4
+    transition: $transition
   &:hover, &:focus
     transform: perspective(1000px) translate3d(0,0,100px)
     // filter: grayscale(0%)
@@ -65,6 +67,8 @@ $transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
         opacity: 1
       &:after
         transform: perspective(100px) translate3d(0, 0, 0)
+    .icons
+      opacity: .8
   &:active
     transform: perspective(1000px) translate3d(0,0,50px)
     // filter: grayscale(0%)
@@ -73,6 +77,8 @@ $transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
         opacity: .99
       &:after
         transform: perspective(100px) translate3d(0, 0, -10px)
+    .icons
+      opacity: .8
 
 
 </style>
@@ -80,7 +86,8 @@ $transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
 <template>
   <section class="category" :style="style" @click="select(payload)">
     <div class="category--content">
-      <!-- <i class="icons" :class="payload.icon" :style="{color: payload.colors[0]}"></i> -->
+      <i class="icons" :class="payload.icon" :style="{color: payload.colors[0]}"></i>
+      <!-- <i class="icons" :class="payload.icon"></i> -->
       <span class="category--title">{{payload.name}}</span>
     </div>
     <!-- <button class="button outline large w100" @click="select(title)">{{title}}</button> -->
